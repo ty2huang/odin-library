@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/slider.css">
+    <link rel="stylesheet" href="components/modal.css">
+    <script src="script.js" defer></script>
+    <title>My Library</title>
+</head>
+<body>
+    <header class="header">My Library of Books</header>
+    <main class="main">
+        <button id="newBookBtn" class="btn">+ New Book</button>
+        <div class="books-div"></div>
+    </main>
+    <footer class="footer">Copyright © 2021 ty2huang 
+        <a href="https://github.com/ty2huang" target="_blank">
+            <i class="fa fa-github"></i>
+        </a>
+    </footer>
+
+    <!-- The Add Book Modal -->
+    <div id="addBookModal" class="modal">
+        <form id="addBookForm" class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="form-title">Add New Book</h2>
+            <input type="text" id="titleInput" class="big-textbox" placeholder="Title" required>
+            <input type="text" id="authorInput" class="big-textbox" placeholder="Author" required>
+            <input type="number" id="numPagesInput" class="big-textbox" placeholder="# of Pages" required>
+            <div class="has-read">
+                <input type="checkbox" id="hasReadInput" class="big-checkbox" />
+                <label for="hasReadInput" class="checkboxtext">I have read this book</label>
+            </div>
+            <input type="submit" class="btn">
+        </form>
+    </div>
+    
+    <div class="templates">
+        <!-- A deep copy of this card is made by javascript when adding new book -->
+        <div class="card">
+            <div class="info">
+                <p><b>Title: </b><span class="title"></span></p>
+                <p><b>Author: </b><span class="author"></span></p>
+                <p><b># of Pages: </b><span class="num-pages">328</span></p>
+            </div>
+            <div class="controls">
+                <p><b>Mark as Read: </b>
+                <label class="switch">
+                    <input type="checkbox" class="mark-read">
+                    <span class="slider round"></span>
+                </label></p>
+                <div>
+                    <button class="edit-btn btn">Edit Book</button>
+                    <button class="remove-btn btn">Remove Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

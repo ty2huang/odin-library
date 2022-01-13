@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+
+/* HEADER */
+
+.header {
+    font-size: 32px;
+    margin: 24px;
+    font-weight: bold;
+}
+
+
+/* MAIN */
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 4px 16px;
+    width: fit-content;
+}
+
+#newBookBtn {
+    margin-bottom: 32px;
+    background-color: lavender;
+}
+
+#newBookBtn:hover {
+    background-color: aliceblue;
+}
+
+#newBookBtn:active {
+    background-color: rgb(202, 208, 214);
+}
+
+.books-div {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: floralwhite;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 25px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 24px;
+    text-align: left;
+}
+
+.templates {
+    display: none;
+}
+
+.info, .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    gap: 10px;
+    width: auto;
+    padding: 10px;
+}
+
+.fa-github {
+    color: black;
+    font-size: 24px;
+}
